@@ -1,0 +1,17 @@
+{
+  "name": "chat67",
+  "version": "1.0.0",
+  "description": "Chat video/audio cu link de camera si conversatie salvata",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
