@@ -1,10 +1,21 @@
-# chat67
+# Proiectarea_Retelelor_De_Calculatoare
+WebChat
+
+Aplicatia se numeste **chat67**.
 
 Aplicatie simpla de chat **video + audio** in timp real. Te conectezi prin **link de camera**, nu prin matching random (nu e Omegle/OmeTV).
 
 In dreapta ai chat text. Conversatia se salveaza pe acelasi link, ca sa o vezi si daca revii in camera.
 
-## Cum pornesti
+## Cum pornesti din VS Code / Cursor
+
+1. File → Open Folder → `C:\Users\ionut\Downloads\chat67`
+2. Terminal → New Terminal
+3. Prima data: `npm install`
+4. Apoi: `npm start`
+5. In browser: [http://localhost:3000](http://localhost:3000)
+
+Sau apasa **F5** si alege **Porneste chat67**.
 
 Ai nevoie de Node.js 18+.
 
