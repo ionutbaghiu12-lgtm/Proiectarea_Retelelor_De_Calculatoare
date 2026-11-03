@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chat67</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <main class="home">
+    <div class="card">
+      <p class="logo">chat67</p>
+      <h1>Video + audio prin link</h1>
+      <p class="hint">Creezi o camera, copiezi linkul si il trimiti persoanei cu care vrei sa vorbesti. Nu e matching random.</p>
+      <label for="name">Numele tau</label>
+      <input id="name" maxlength="24" placeholder="ex: Ionut" />
+      <button id="create" type="button">Creeaza camera</button>
+      <p class="or">sau intra pe un link primit</p>
+      <div class="row">
+        <input id="link" placeholder="http://localhost:3000/room/abc123" />
+        <button id="join" class="ghost" type="button">Intra</button>
+      </div>
+    </div>
+  </main>
+  <script src="/js/home.js"></script>
+</body>
+</html>
