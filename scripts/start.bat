@@ -1,4 +1,4 @@
 @echo off
 cd /d "%~dp0.."
-call npm install
-call npm start
+call mvnw.cmd spring-boot:run
+if errorlevel 1 pause
