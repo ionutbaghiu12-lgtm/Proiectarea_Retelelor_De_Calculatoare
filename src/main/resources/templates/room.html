@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camera | chat67</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="room-body" th:attr="data-name=${cont.nume}">
+  <header class="topbar">
+    <strong>chat67</strong>
+    <span id="status">Se conecteaza...</span>
+    <div class="top-actions">
+      <button id="copy" type="button">Copiaza linkul</button>
+      <a class="leave" href="/">Iesi din camera</a>
+      <form th:action="@{/logout}" method="post"><button class="ghost" type="submit">Iesire din cont</button></form>
+    </div>
+  </header>
+
+  <div class="layout">
+    <section class="stage">
+      <div id="videos" class="videos"></div>
+      <div class="controls">
+        <button id="mic" type="button">Microfon pornit</button>
+        <button id="cam" type="button">Camera pornita</button>
+      </div>
+    </section>
+
+    <aside class="chat">
+      <h2>Chat</h2>
+      <p class="chat-note">Conversatia ramane salvata pe acest link.</p>
+      <div id="messages"></div>
+      <form id="chat-form">
+        <input id="chat-input" autocomplete="off" maxlength="500" placeholder="Scrie un mesaj..." />
+        <button type="submit">Trimite</button>
+      </form>
+    </aside>
+  </div>
+
+  <script src="/js/socket.js"></script>
+  <script src="/js/room.js"></script>
+</body>
+</html>

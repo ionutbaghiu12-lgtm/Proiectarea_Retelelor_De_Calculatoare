@@ -16,9 +16,16 @@ Aplicație simplă de chat video/audio în timp real. Nu este matching random (O
 - Conversatia text ramane pe acelasi link daca revii.
 - Functioneaza pe `localhost` cu camera/microfon din browser.
 
-## Ce nu e inclus in versiunea de start
+## Actualizare: Spring Security
 
-- Conturi / login
+- Server Java/Spring Boot, in loc de Node.js.
+- Conturi in H2, parole BCrypt si login necesar pentru camere, istoric si WebSocket.
+- Roluri CLIENT/ADMIN; numai ADMIN vede lista conturilor.
+- Logout cu CSRF si inchiderea conexiunilor asociate.
+- Detalii: [securitate.md](securitate.md).
+
+## Ce nu e inclus
+
 - Matching random
 - Inregistrare video
 - Moderare

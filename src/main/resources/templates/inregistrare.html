@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cont nou | chat67</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body><main class="home"><div class="card">
+  <p class="logo">chat67</p><h1>Creeaza un cont</h1>
+  <p class="error" th:if="${eroare}" th:text="${eroare}" role="alert"></p>
+  <form th:action="@{/inregistrare}" method="post">
+    <label for="nume">Numele afisat in chat</label><input id="nume" name="nume" maxlength="24" autocomplete="nickname" required>
+    <label for="email">Email</label><input id="email" name="email" type="email" maxlength="150" autocomplete="username" required>
+    <label for="parola">Parola (minimum 8 caractere)</label><input id="parola" name="parola" type="password" minlength="8" maxlength="72" autocomplete="new-password" required>
+    <label for="confirmare">Confirma parola</label><input id="confirmare" name="confirmare" type="password" minlength="8" maxlength="72" autocomplete="new-password" required>
+    <button type="submit">Creeaza cont</button>
+  </form>
+  <p><a th:href="@{/login}">Inapoi la autentificare</a></p>
+</div></main></body></html>

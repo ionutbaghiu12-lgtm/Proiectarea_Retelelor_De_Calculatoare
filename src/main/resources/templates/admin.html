@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrare | chat67</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body><main class="home"><div class="card admin-card">
+  <p class="logo">chat67</p><h1>Utilizatori</h1>
+  <p class="hint">Aceasta pagina este accesibila doar administratorilor.</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Nume</th><th>Email</th><th>Rol</th></tr></thead>
+    <tbody><tr th:each="cont : ${conturi}"><td th:text="${cont.nume}"></td><td th:text="${cont.email}"></td><td th:text="${cont.rol}"></td></tr></tbody>
+  </table></div>
+  <p><a th:href="@{/}">Inapoi la camere</a></p>
+  <form th:action="@{/logout}" method="post"><button class="ghost" type="submit">Iesire din cont</button></form>
+</div></main></body></html>

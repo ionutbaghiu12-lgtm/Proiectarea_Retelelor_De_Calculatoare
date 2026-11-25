@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autentificare | chat67</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body><main class="home"><div class="card">
+  <p class="logo">chat67</p><h1>Intra in cont</h1>
+  <p class="hint">Autentifica-te pentru a crea o camera sau pentru a intra pe un link primit.</p>
+  <p class="error" th:if="${param.error}" role="alert">Email sau parola gresita.</p>
+  <p th:if="${param.iesire}">Ai iesit din cont.</p>
+  <p th:if="${param.inregistrat}">Cont creat. Te poti autentifica.</p>
+  <form th:action="@{/login}" method="post">
+    <label for="email">Email</label><input id="email" name="email" type="email" maxlength="150" autocomplete="username" required>
+    <label for="parola">Parola</label><input id="parola" name="parola" type="password" autocomplete="current-password" required>
+    <button type="submit">Autentificare</button>
+  </form>
+  <p>Nu ai cont? <a th:href="@{/inregistrare}">Creeaza un cont</a></p>
+</div></main></body></html>
